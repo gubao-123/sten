@@ -1,0 +1,282 @@
+﻿[
+    {
+        "id": 1,
+        "chinese": "你长得怎么样?",
+        "english": "What do you look like?",
+        "dalei": "What疑问句",
+        "state": "未学",
+        "xiaolei": "3U1-1"
+    },
+    {
+        "id": 2,
+        "chinese": "这是什么?它是一个大的头。",
+        "english": "What is it? It's a big head.",
+        "dalei": "What疑问句",
+        "state": "未学",
+        "xiaolei": "3U1-1"
+    },
+    {
+        "id": 3,
+        "chinese": "那是什么?那是身体。",
+        "english": "What is that? That’s the body",
+        "dalei": "What疑问句",
+        "state": "未学",
+        "xiaolei": "3U1-1"
+    },
+    {
+        "id": 4,
+        "chinese": "它们是什么? 他们是手臂。",
+        "english": "What are they? They are the arms.",
+        "dalei": "What疑问句",
+        "state": "未学",
+        "xiaolei": "3U1-1"
+    },
+    {
+        "id": 5,
+        "chinese": "你好，很高兴见到你！",
+        "english": "Hello, nice to meet you!",
+        "dalei": "陈述句",
+        "state": "未学",
+        "xiaolei": "3U1-1"
+    },
+    {
+        "id": 6,
+        "chinese": "你好，我是一个机器人。",
+        "english": "Hello! I am a robot.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U1-2"
+    },
+    {
+        "id": 7,
+        "chinese": "我的名字叫袁梦",
+        "english": "My name is yuanmeng",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U1-2"
+    },
+    {
+        "id": 8,
+        "chinese": "这是我的头，我的头是大的。",
+        "english": "This is my head. My head is big.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U1-2"
+    },
+    {
+        "id": 9,
+        "chinese": "这是我的手臂，我的手臂很长。",
+        "english": "These are my arms. My arms are long.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U1-2"
+    },
+    {
+        "id": 10,
+        "chinese": "这是我的手，我的是大的。",
+        "english": "These are my hands. My hands are big.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U1-2"
+    },
+    {
+        "id": 11,
+        "chinese": "这是我的腿，我的腿是短的。",
+        "english": "These are my legs. They are short.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U1-2"
+    },
+    {
+        "id": 12,
+        "chinese": "这是我的脚，它们很小，黄色的。",
+        "english": "These are my feet. They are small and brown.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U1-2"
+    },
+    {
+        "id": 13,
+        "chinese": "你的机器人叫什么名字？它叫天天。",
+        "english": "What’s the name of your robot? His name is Tiantian.",
+        "dalei": "What疑问句",
+        "state": "",
+        "xiaolei": "3U1-2"
+    },
+    {
+        "id": 14,
+        "chinese": "他是高还是矮的？他是矮的。",
+        "english": "Is he tall or short? He is short.",
+        "dalei": "系动词选择疑问句",
+        "state": "",
+        "xiaolei": "3U1-2"
+    },
+    {
+        "id": 15,
+        "chinese": "他的脸是大的还是小的？它是大的。",
+        "english": "Is his face big or small? It is big.",
+        "dalei": "系动词选择疑问句",
+        "state": "",
+        "xiaolei": "3U1-2"
+    },
+    {
+        "id": 16,
+        "chinese": "他的眼睛是大的还是小的？它们是又小又黑的。",
+        "english": "Are his eyes big or small? They are small and black.",
+        "dalei": "系动词选择疑问句",
+        "state": "",
+        "xiaolei": "3U1-2"
+    },
+    {
+        "id": 17,
+        "chinese": "他很可爱，我喜欢他。",
+        "english": "He is cute. I like him.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U1-2"
+    },
+    {
+        "id": 18,
+        "chinese": "我有腿，我能跑又会跳。",
+        "english": "I have legs，I can jump and run.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U1-3"
+    },
+    {
+        "id": 19,
+        "chinese": "我有眼睛和耳朵，我能看又会听。",
+        "english": "I have eyes and ears，I can see and hear.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U1-3"
+    },
+    {
+        "id": 20,
+        "chinese": "我有一张嘴和一张脸，我能唱歌又爱笑。",
+        "english": "I have a mouth and a face， I can sing and smile.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U1-3"
+    },
+    {
+        "id": 21,
+        "chinese": "这是快乐的我！",
+        "english": "This is a happy me！",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U1-3"
+    },
+    {
+        "id": 22,
+        "chinese": "你能跳吗？是的，我能跳。",
+        "english": "Can you jump? Yes, I can.",
+        "dalei": "一般疑问句",
+        "state": "",
+        "xiaolei": "3U1-3"
+    },
+    {
+        "id": 23,
+        "chinese": "你能看吗？是的，我能看，我有两只大眼睛。",
+        "english": "Can you see? Yes,I can. I have two big eyes.",
+        "dalei": "一般疑问句",
+        "state": "",
+        "xiaolei": "3U1-3"
+    },
+    {
+        "id": 24,
+        "chinese": "你能弹乐器？不，我不会，但我会唱歌！",
+        "english": "Can you play music? No, I can’t. But I can sing!",
+        "dalei": "一般疑问句",
+        "state": "",
+        "xiaolei": "3U1-3"
+    },
+    {
+        "id": 25,
+        "chinese": "你开心吗？是的，我很开心。我有好朋友！",
+        "english": "Are you happy? Yes, I am happy. I have good friends!",
+        "dalei": "一般疑问句",
+        "state": "",
+        "xiaolei": "3U1-3"
+    },
+    {
+        "id": 26,
+        "chinese": "你们学校有什么校规？",
+        "english": "What school rules do you have?",
+        "dalei": "What疑问句",
+        "state": "",
+        "xiaolei": "3U2-1"
+    },
+    {
+        "id": 27,
+        "chinese": "你能说说你们的教室？是的，我能。",
+        "english": "Can you talk about your classroom? Yes,I can.",
+        "dalei": "一般疑问句",
+        "state": "",
+        "xiaolei": "3U2-1"
+    },
+    {
+        "id": 28,
+        "chinese": "你能说说你们的校规？是的，我能。",
+        "english": "Can you talk about your school rules? Yes,I can.",
+        "dalei": "一般疑问句",
+        "state": "",
+        "xiaolei": "3U2-1"
+    },
+    {
+        "id": 29,
+        "chinese": "这是我们的教室。",
+        "english": "This is our classroom.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U2-1"
+    },
+    {
+        "id": 30,
+        "chinese": "我们有块黑板。",
+        "english": "We have a blackboard.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U2-1"
+    },
+    {
+        "id": 31,
+        "chinese": "黑板是很大的。",
+        "english": "The blackboard is big.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U2-1"
+    },
+    {
+        "id": 32,
+        "chinese": "我们有凳子和椅子。",
+        "english": "We have desks and chairs.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U2-1"
+    },
+    {
+        "id": 33,
+        "chinese": "凳子和椅子是干净的。",
+        "english": "The desks and chairs are tidy.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U2-1"
+    },
+    {
+        "id": 34,
+        "chinese": "我们有窗户，门窗是明亮的。",
+        "english": "We have windows,the windows are clean.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U2-1"
+    },
+    {
+        "id": 35,
+        "chinese": "我们有一个整洁的教室。",
+        "english": "We have a tidy classroom.",
+        "dalei": "陈述句",
+        "state": "",
+        "xiaolei": "3U2-1"
+    }
+]
