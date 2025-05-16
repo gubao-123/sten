@@ -1,6 +1,6 @@
 // 预定义的用户账号和密码
 const users = [
-    { username: 'user1', password: 'pass1' },
+    { username: 'ym', password: 'ym' },
     { username: 'user2', password: 'pass2' },
     { username: 'user3', password: 'pass3' },
     { username: 'user4', password: 'pass4' },
@@ -40,9 +40,6 @@ const submitTranslationBtn = document.getElementById('submitTranslation');
 
 // 初始化应用
 function initApp() {
-    // 初始化手写板
-    initHandwritingPad();
-    
     // 加载学习记录
     loadLearningHistory();
     // 初始化统计显示
@@ -80,36 +77,61 @@ function initApp() {
     submitTranslationBtn.addEventListener('click', handleSubmitTranslation);
 }
 
-// 初始化手写板（基于您提供的两位数乘法练习代码优化）
+// 初始化手写板（修复版）
 function initHandwritingPad() {
-    signaturePad = new SignaturePad(handwritingCanvas, {
+    const canvas = document.getElementById('handwritingCanvas');
+    const container = canvas.parentElement;
+    
+    // 设置canvas的物理尺寸
+    const resizeCanvas = () => {
+        const ratio = window.devicePixelRatio || 1;
+        canvas.width = container.offsetWidth * ratio;
+        canvas.height = container.offsetHeight * ratio;
+        canvas.getContext('2d').scale(ratio, ratio);
+        
+        // 保持canvas显示尺寸与容器一致
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
+    };
+    
+    // 初始化签名板
+    signaturePad = new SignaturePad(canvas, {
         minWidth: 1,
         maxWidth: 3,
         penColor: "rgb(0, 0, 0)",
-        backgroundColor: "rgb(255, 255, 255)"
+        backgroundColor: "rgb(255, 255, 255)",
+        throttle: 16 // 优化绘制性能
     });
-    
-    // 调整画布大小
-    function resizeCanvas() {
-        const ratio = Math.max(window.devicePixelRatio || 1, 1);
-        handwritingCanvas.width = handwritingCanvas.offsetWidth * ratio;
-        handwritingCanvas.height = handwritingCanvas.offsetHeight * ratio;
-        handwritingCanvas.getContext("2d").scale(ratio, ratio);
-        signaturePad.clear(); // 清除画布
-    }
-    
-    window.addEventListener("resize", resizeCanvas);
+
+    // 首次调整大小
     resizeCanvas();
+    
+    // 处理窗口大小变化
+    window.addEventListener('resize', () => {
+        resizeCanvas();
+    });
+
+    // 禁用页面滚动（仅针对触摸设备）
+    canvas.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+    }, { passive: false });
+    
+    // 确保手写板可用
+    setTimeout(() => {
+        signaturePad.clear();
+    }, 100);
 }
 
 // 清除手写内容
 function clearHandwriting() {
-    signaturePad.clear();
+    if (signaturePad) {
+        signaturePad.clear();
+    }
 }
 
 // 处理翻译提交
 function handleSubmitTranslation() {
-    if (signaturePad.isEmpty()) {
+    if (!signaturePad || signaturePad.isEmpty()) {
         alert('请先手写输入您的翻译');
         return;
     }
@@ -227,6 +249,9 @@ function startLearning() {
         return;
     }
 
+    // 初始化手写板（确保在显示后初始化）
+    initHandwritingPad();
+    
     addHistoryRecord('开始学习');
     updateStats();
     showNextSentence();
