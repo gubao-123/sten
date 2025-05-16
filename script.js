@@ -1,6 +1,6 @@
 // 预定义的用户账号和密码
 const users = [
-    { username: 'ym', password: 'ym' },
+    { username: 'user1', password: 'pass1' },
     { username: 'user2', password: 'pass2' },
     { username: 'user3', password: 'pass3' },
     { username: 'user4', password: 'pass4' },
@@ -84,12 +84,10 @@ function initHandwritingPad() {
     
     // 设置canvas的物理尺寸
     const resizeCanvas = () => {
-        const ratio = window.devicePixelRatio || 1;
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
         canvas.width = container.offsetWidth * ratio;
         canvas.height = container.offsetHeight * ratio;
         canvas.getContext('2d').scale(ratio, ratio);
-        
-        // 保持canvas显示尺寸与容器一致
         canvas.style.width = '100%';
         canvas.style.height = '100%';
     };
@@ -100,26 +98,27 @@ function initHandwritingPad() {
         maxWidth: 3,
         penColor: "rgb(0, 0, 0)",
         backgroundColor: "rgb(255, 255, 255)",
-        throttle: 16 // 优化绘制性能
+        throttle: 16
     });
 
     // 首次调整大小
     resizeCanvas();
     
     // 处理窗口大小变化
-    window.addEventListener('resize', () => {
-        resizeCanvas();
-    });
+    window.addEventListener('resize', resizeCanvas);
 
-    // 禁用页面滚动（仅针对触摸设备）
-    canvas.addEventListener('touchmove', (e) => {
-        e.preventDefault();
-    }, { passive: false });
-    
-    // 确保手写板可用
-    setTimeout(() => {
-        signaturePad.clear();
-    }, 100);
+    // 触摸设备支持
+    if ('ontouchstart' in window) {
+        // 禁用触摸设备的页面滚动
+        canvas.addEventListener('touchmove', (e) => {
+            if (e.target === canvas) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+        
+        // 修复iOS Safari的触摸问题
+        document.body.style.cursor = 'pointer';
+    }
 }
 
 // 清除手写内容
