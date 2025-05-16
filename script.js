@@ -80,7 +80,7 @@ function initApp() {
     submitTranslationBtn.addEventListener('click', handleSubmitTranslation);
 }
 
-// 初始化手写板
+// 初始化手写板（基于您提供的两位数乘法练习代码优化）
 function initHandwritingPad() {
     signaturePad = new SignaturePad(handwritingCanvas, {
         minWidth: 1,
