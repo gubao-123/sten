@@ -1,6 +1,6 @@
 // 预定义的用户账号和密码
 const users = [
-    { username: 'user1', password: 'pass1' },
+    { username: 'ym', password: 'ym' },
     { username: 'user2', password: 'pass2' },
     { username: 'user3', password: 'pass3' },
     { username: 'user4', password: 'pass4' },
