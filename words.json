@@ -3,280 +3,1264 @@
         "id": 1,
         "chinese": "你长得怎么样?",
         "english": "What do you look like?",
-        "dalei": "What疑问句",
+        "dalei": "3U1-1",
         "state": "未学",
-        "xiaolei": "3U1-1"
+        "xiaolei": "What疑问句"
     },
     {
         "id": 2,
         "chinese": "这是什么?它是一个大的头。",
         "english": "What is it? It's a big head.",
-        "dalei": "What疑问句",
+        "dalei": "3U1-1",
         "state": "未学",
-        "xiaolei": "3U1-1"
+        "xiaolei": "What疑问句"
     },
     {
         "id": 3,
         "chinese": "那是什么?那是身体。",
         "english": "What is that? That’s the body",
-        "dalei": "What疑问句",
+        "dalei": "3U1-1",
         "state": "未学",
-        "xiaolei": "3U1-1"
+        "xiaolei": "What疑问句"
     },
     {
         "id": 4,
         "chinese": "它们是什么? 他们是手臂。",
         "english": "What are they? They are the arms.",
-        "dalei": "What疑问句",
+        "dalei": "3U1-1",
         "state": "未学",
-        "xiaolei": "3U1-1"
+        "xiaolei": "What疑问句"
     },
     {
         "id": 5,
         "chinese": "你好，很高兴见到你！",
         "english": "Hello, nice to meet you!",
-        "dalei": "陈述句",
+        "dalei": "3U1-1",
         "state": "未学",
-        "xiaolei": "3U1-1"
+        "xiaolei": "陈述句"
     },
     {
         "id": 6,
         "chinese": "你好，我是一个机器人。",
         "english": "Hello! I am a robot.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U1-2"
+        "dalei": "3U1-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 7,
         "chinese": "我的名字叫袁梦",
         "english": "My name is yuanmeng",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U1-2"
+        "dalei": "3U1-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 8,
         "chinese": "这是我的头，我的头是大的。",
         "english": "This is my head. My head is big.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U1-2"
+        "dalei": "3U1-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 9,
         "chinese": "这是我的手臂，我的手臂很长。",
         "english": "These are my arms. My arms are long.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U1-2"
+        "dalei": "3U1-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 10,
         "chinese": "这是我的手，我的是大的。",
         "english": "These are my hands. My hands are big.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U1-2"
+        "dalei": "3U1-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 11,
         "chinese": "这是我的腿，我的腿是短的。",
         "english": "These are my legs. They are short.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U1-2"
+        "dalei": "3U1-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 12,
         "chinese": "这是我的脚，它们很小，黄色的。",
         "english": "These are my feet. They are small and brown.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U1-2"
+        "dalei": "3U1-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 13,
         "chinese": "你的机器人叫什么名字？它叫天天。",
         "english": "What’s the name of your robot? His name is Tiantian.",
-        "dalei": "What疑问句",
-        "state": "",
-        "xiaolei": "3U1-2"
+        "dalei": "3U1-2",
+        "state": "未学",
+        "xiaolei": "What疑问句"
     },
     {
         "id": 14,
         "chinese": "他是高还是矮的？他是矮的。",
         "english": "Is he tall or short? He is short.",
-        "dalei": "系动词选择疑问句",
-        "state": "",
-        "xiaolei": "3U1-2"
+        "dalei": "3U1-2",
+        "state": "未学",
+        "xiaolei": "系动词选择疑问句"
     },
     {
         "id": 15,
         "chinese": "他的脸是大的还是小的？它是大的。",
         "english": "Is his face big or small? It is big.",
-        "dalei": "系动词选择疑问句",
-        "state": "",
-        "xiaolei": "3U1-2"
+        "dalei": "3U1-2",
+        "state": "未学",
+        "xiaolei": "系动词选择疑问句"
     },
     {
         "id": 16,
         "chinese": "他的眼睛是大的还是小的？它们是又小又黑的。",
         "english": "Are his eyes big or small? They are small and black.",
-        "dalei": "系动词选择疑问句",
-        "state": "",
-        "xiaolei": "3U1-2"
+        "dalei": "3U1-2",
+        "state": "未学",
+        "xiaolei": "系动词选择疑问句"
     },
     {
         "id": 17,
         "chinese": "他很可爱，我喜欢他。",
         "english": "He is cute. I like him.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U1-2"
+        "dalei": "3U1-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 18,
         "chinese": "我有腿，我能跑又会跳。",
         "english": "I have legs，I can jump and run.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U1-3"
+        "dalei": "3U1-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 19,
         "chinese": "我有眼睛和耳朵，我能看又会听。",
         "english": "I have eyes and ears，I can see and hear.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U1-3"
+        "dalei": "3U1-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 20,
         "chinese": "我有一张嘴和一张脸，我能唱歌又爱笑。",
         "english": "I have a mouth and a face， I can sing and smile.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U1-3"
+        "dalei": "3U1-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 21,
         "chinese": "这是快乐的我！",
         "english": "This is a happy me！",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U1-3"
+        "dalei": "3U1-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 22,
         "chinese": "你能跳吗？是的，我能跳。",
         "english": "Can you jump? Yes, I can.",
-        "dalei": "一般疑问句",
-        "state": "",
-        "xiaolei": "3U1-3"
+        "dalei": "3U1-3",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
     },
     {
         "id": 23,
         "chinese": "你能看吗？是的，我能看，我有两只大眼睛。",
         "english": "Can you see? Yes,I can. I have two big eyes.",
-        "dalei": "一般疑问句",
-        "state": "",
-        "xiaolei": "3U1-3"
+        "dalei": "3U1-3",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
     },
     {
         "id": 24,
         "chinese": "你能弹乐器？不，我不会，但我会唱歌！",
         "english": "Can you play music? No, I can’t. But I can sing!",
-        "dalei": "一般疑问句",
-        "state": "",
-        "xiaolei": "3U1-3"
+        "dalei": "3U1-3",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
     },
     {
         "id": 25,
         "chinese": "你开心吗？是的，我很开心。我有好朋友！",
         "english": "Are you happy? Yes, I am happy. I have good friends!",
-        "dalei": "一般疑问句",
-        "state": "",
-        "xiaolei": "3U1-3"
+        "dalei": "3U1-3",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
     },
     {
         "id": 26,
         "chinese": "你们学校有什么校规？",
         "english": "What school rules do you have?",
-        "dalei": "What疑问句",
-        "state": "",
-        "xiaolei": "3U2-1"
+        "dalei": "3U2-1",
+        "state": "未学",
+        "xiaolei": "What疑问句"
     },
     {
         "id": 27,
         "chinese": "你能说说你们的教室？是的，我能。",
         "english": "Can you talk about your classroom? Yes,I can.",
-        "dalei": "一般疑问句",
-        "state": "",
-        "xiaolei": "3U2-1"
+        "dalei": "3U2-1",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
     },
     {
         "id": 28,
         "chinese": "你能说说你们的校规？是的，我能。",
         "english": "Can you talk about your school rules? Yes,I can.",
-        "dalei": "一般疑问句",
-        "state": "",
-        "xiaolei": "3U2-1"
+        "dalei": "3U2-1",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
     },
     {
         "id": 29,
         "chinese": "这是我们的教室。",
         "english": "This is our classroom.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U2-1"
+        "dalei": "3U2-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 30,
         "chinese": "我们有块黑板。",
         "english": "We have a blackboard.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U2-1"
+        "dalei": "3U2-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 31,
         "chinese": "黑板是很大的。",
         "english": "The blackboard is big.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U2-1"
+        "dalei": "3U2-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 32,
         "chinese": "我们有凳子和椅子。",
         "english": "We have desks and chairs.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U2-1"
+        "dalei": "3U2-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 33,
         "chinese": "凳子和椅子是干净的。",
         "english": "The desks and chairs are tidy.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U2-1"
+        "dalei": "3U2-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 34,
         "chinese": "我们有窗户，门窗是明亮的。",
         "english": "We have windows,the windows are clean.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U2-1"
+        "dalei": "3U2-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
     },
     {
         "id": 35,
         "chinese": "我们有一个整洁的教室。",
         "english": "We have a tidy classroom.",
-        "dalei": "陈述句",
-        "state": "",
-        "xiaolei": "3U2-1"
+        "dalei": "3U2-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 36,
+        "chinese": "我们有一个新的教室。",
+        "english": "We have a new classroom.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 37,
+        "chinese": "你们的教室是怎么样的？它很大，窗户又大又干净。",
+        "english": "What is your classroom like? It is big. The windows are big and clean.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 38,
+        "chinese": "你们有新桌子和椅子吗？是的，我们有。",
+        "english": "Do you have new desks and chairs? Yes, we do.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 39,
+        "chinese": "你们有新黑板吗？没有，但我们有新的白板。",
+        "english": "Do you have a new blackboard? No, we don’t. But we have a new whiteboard!",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 40,
+        "chinese": "我喜欢我的教室，它又大又明亮。",
+        "english": "I like my classroom. It is big and clean.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 41,
+        "chinese": "早上，我们打开门和窗户。",
+        "english": "In the morning, we open the doors and the windows.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 42,
+        "chinese": "我们把书和笔放在桌子上面，然后上课。",
+        "english": "We put books and pens on the desks. Then we have classes.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 43,
+        "chinese": "下午，我们把书本和铅笔盒放回书包。",
+        "english": "In the afternoon, we put books and pencil cases in our bags.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 44,
+        "chinese": "我们擦干净黑板和白板。",
+        "english": "We clean the blackboard and the whiteboard.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 45,
+        "chinese": "放学了，我们关好门窗和门,然后回家。",
+        "english": "After school,we close the windows and the doors,then we go home.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 46,
+        "chinese": "你准时到学校吗？是的，我准时。",
+        "english": "Do you come to school on time? Yes,I do.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 47,
+        "chinese": "你们排队吗？是的。",
+        "english": "Do you line up? Yes,we do.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 48,
+        "chinese": "你有清理你的桌子吗？是的，我们清理的。",
+        "english": "Do you tidy your desk? Yes,we do.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 49,
+        "chinese": "你有擦干净黑板吗？是的，我们擦干净的。",
+        "english": "Do you clean the blackboard? Yes,we do.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 50,
+        "chinese": "放学后，你们有关好窗户和门吗？是的，我们有关的。",
+        "english": "Do you close the windows and the doors after school? Yes,we do.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 51,
+        "chinese": "让我们为好班级制订一些班规。",
+        "english": "Let’s make rules for a good class.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 52,
+        "chinese": "我们应该制订什么班规好呢？",
+        "english": "What rules should we make?",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 53,
+        "chinese": "准时上学。",
+        "english": "Come to school on time.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 54,
+        "chinese": "清理黑板，桌子和椅子。",
+        "english": "Clean the blackboard, the desks and the chairs.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 55,
+        "chinese": "放学后，关好门和窗户。",
+        "english": "Close the doors and the windows after school.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 56,
+        "chinese": "不要在教室里乱跑。",
+        "english": "Don’t run in the classroom.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 57,
+        "chinese": "不要在墙上乱画。",
+        "english": "Don’t draw on the walls.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 58,
+        "chinese": "好，让我们把这些班规写下来。",
+        "english": "Good. Let’s write down these rules.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 59,
+        "chinese": "上学不要迟到，准时到学校。",
+        "english": "Don’t be late for school. Come to school on time.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 60,
+        "chinese": "不要插队，要排队。",
+        "english": "Don’t jump the line. Line up.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 61,
+        "chinese": "我是一个好学生。",
+        "english": "I am a kind student.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 62,
+        "chinese": "我用微笑对着朋友。",
+        "english": "I smile at my friends.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 63,
+        "chinese": "我常说你好，谢谢和对不起",
+        "english": "I say “Hello” “Thank you” and “Sorry”.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 64,
+        "chinese": "我准时上学，排队。",
+        "english": "I come to school on time. I line up.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 65,
+        "chinese": "我让学校保持干净。",
+        "english": "I keep the school clean.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 66,
+        "chinese": "我帮助朋友。",
+        "english": "I help my friends.",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 67,
+        "chinese": "我喜欢我的学校和教室！",
+        "english": "I love my school and my class!",
+        "dalei": "3U2-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 68,
+        "chinese": "让我们买些食物准备你的party吧。",
+        "english": "Let’s get some food for your party.",
+        "dalei": "3U3-1",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 69,
+        "chinese": "你最喜欢的水果是什么？",
+        "english": "What’s your favourite fruit?",
+        "dalei": "3U3-1",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 70,
+        "chinese": "我最喜欢吃葡萄。",
+        "english": "My favourite fruit is grapes.",
+        "dalei": "3U3-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 71,
+        "chinese": "让我们买些苹果和葡萄吧。",
+        "english": "Let’s get some apples and grapes.",
+        "dalei": "3U3-1",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 72,
+        "chinese": "我最爱吃鸡肉，我也喜欢吃鱼。",
+        "english": "My favourite meat is chicken. I like fish too.",
+        "dalei": "3U3-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 73,
+        "chinese": "我们买些鸡肉和鱼吧。",
+        "english": "Let’s get some chicken and fish.",
+        "dalei": "3U3-1",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 74,
+        "chinese": "我喜欢面包，我们也买些面包吧。",
+        "english": "I like bread. Let’s get some bread too.",
+        "dalei": "3U3-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 75,
+        "chinese": "你喜欢冰淇淋吗？",
+        "english": "Do you like ice cream?",
+        "dalei": "3U3-1",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 76,
+        "chinese": "什么食物对我们的健康好？",
+        "english": "What food is good for us?",
+        "dalei": "3U3-1",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 77,
+        "chinese": "我喜欢苹果，它们是我最喜欢的水果，它们又红又绿又黄，非常甜。",
+        "english": "I like apples. They are my favourite fruit. They are red, green and yellow. They are sweet.",
+        "dalei": "3U3-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 78,
+        "chinese": "我喜欢鸡肉和鱼肉，它们是我最喜欢的食物，美味极了。",
+        "english": "I like chicken and fish.They are my favourite food. They are yummy.",
+        "dalei": "3U3-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 79,
+        "chinese": "我喜欢萝卜，它们是我最喜欢的蔬菜，又甜又鲜。",
+        "english": "I like carrots. They are my favourite vegetable. They are sweet and fresh.",
+        "dalei": "3U3-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 80,
+        "chinese": "我们有很多食物，有鱼和鸡肉。",
+        "english": "We have a lot of food. We have fish and chicken.",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 81,
+        "chinese": "我们有长寿面，饺子，饮料和牛奶。",
+        "english": "We have birthday noodles,jiaozi, water and milk.",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 82,
+        "chinese": "我们有蛋糕和冰淇淋，也有很多水果。",
+        "english": "We have cakes and ice cream,We also have many fruits.",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 83,
+        "chinese": "请迟点鸡肉，东尼。不吃了，谢谢！",
+        "english": "Please have some chicken, Tony. No,thank you.",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 84,
+        "chinese": "我可以吃些冰淇淋吗？当然可以，给。谢谢！",
+        "english": "May I have some ice cream?Sure, here you are.Thank you!",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 85,
+        "chinese": "今天是我生日",
+        "english": "It is my birthday.",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 86,
+        "chinese": "朋友们带着很多食物来参加我的生日宴会。",
+        "english": "My friends come to my birthday party with a lot of food.",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 87,
+        "chinese": "我们有很多水果，我们品尝着苹果，葡萄和橙子。",
+        "english": "We have many fruits. We eat apples, grapes and oranges.",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 88,
+        "chinese": "我们吃一些肉，鸡肉和鱼。",
+        "english": "We have some meat. We eat chicken and fish.",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 89,
+        "chinese": "我们喝一些饮料和牛奶。",
+        "english": "We drink some water and milk.",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 90,
+        "chinese": "我们都喜欢蛋糕和冰淇淋。我也吃我长寿面。",
+        "english": "We all like cakes and ice cream.I also have my birthday noodles.",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 91,
+        "chinese": "所有的朋友都对我说生日快乐！。我很开心。",
+        "english": "All my friends say “Happy birthday”.I am very happy.",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 92,
+        "chinese": "你在生日宴会上吃了些什么？",
+        "english": "What do you have at your birthday party?",
+        "dalei": "3U3-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 93,
+        "chinese": "我早餐吃了些面包",
+        "english": "I have some bread for breakfast.（I have ... for breakfast）",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 94,
+        "chinese": "我吃了一个苹果和一个鸡蛋。也喝了一些水和牛奶。",
+        "english": "I eat an apple and an egg.I also drink some water and milk",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 95,
+        "chinese": "你中午吃了什么？",
+        "english": "What do you have for lunch?",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 96,
+        "chinese": "我中午吃了饺子。",
+        "english": "I have jiaozi for lunch.（I have ... for lunch）",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 97,
+        "chinese": "我中午吃了个汉堡。",
+        "english": "I have hamburgers for lunch.（I have ... for lunch）",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 98,
+        "chinese": "晚饭我吃了鱼肉和薯片。",
+        "english": "I have fish and chips for dinner（I have ... for dinner）",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 99,
+        "chinese": "你早餐，午餐和晚餐都吃了些什么？",
+        "english": "What do you have for breakfast, lunch and dinner?",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 100,
+        "chinese": "我早餐汉堡和薯片。",
+        "english": "I have hamburgers and chips for breakfast.",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 101,
+        "chinese": "我午餐和晚餐吃鸡肉和冰淇淋。",
+        "english": "I have chicken and ice cream for lunch and dinner.",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 102,
+        "chinese": "早餐吃面包，牛奶和一个鸡蛋，它们有利于你的健康。",
+        "english": "Have bread, milk and an egg for breakfast.They are good for you.(be good for)",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 103,
+        "chinese": "午餐和晚餐吃些肉，蔬菜和水果。",
+        "english": "Have some meat, vegetables and fruit for lunch and dinner.",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 104,
+        "chinese": "太多的薯片和太多的冰淇淋对你不好。",
+        "english": "Too many chips and too much ice cream are bad for you.",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 105,
+        "chinese": "多走多跑！",
+        "english": "Walk and run!",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 106,
+        "chinese": "两只蜜蜂在树上喝着茶，吃着肉。",
+        "english": "Two bees drink tea and eat meat in the tree.(in the tree)",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 107,
+        "chinese": "月亮上，猴子在动物园里煮面条。",
+        "english": "The monkey cooks noodles at the zoo on the moon.(at the zoo,on the moon)",
+        "dalei": "3U3-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 108,
+        "chinese": "你对动物园的动物知多少？",
+        "english": "What do you know about zoo animals?(know about)",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 109,
+        "chinese": "让我们去动物园。",
+        "english": "let’s go to the zoo.",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 110,
+        "chinese": "你在动物园里看到什么？",
+        "english": "What do you see at the zoo?(at the zoo)",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 111,
+        "chinese": "我们看到猴子，大象，小鸟，熊，老虎和狮子。",
+        "english": "We see monkeys,elephants,birds,bears,tigers and lions.",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 112,
+        "chinese": "欢迎来到动物园！淘淘，你看到猴子了吗？",
+        "english": "Welcome to the zoo! Do you see monkeys, Taotao?",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 113,
+        "chinese": "是的，我看到很多猴子。",
+        "english": "Yes, I see many monkeys.",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 114,
+        "chinese": "你看到多少只猴子？",
+        "english": "How many monkeys do you see?(How many...)",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "How疑问句"
+    },
+    {
+        "id": 115,
+        "chinese": "我看到...10只，十一只，十二只，十二只猴子！",
+        "english": "I see ... ten, eleven, twelve, twelve monkeys!",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 116,
+        "chinese": "你看到了什么，安博？我看到狮子了！它们跑得很快。",
+        "english": "What do you see, Amber? I see lions! They run fast.",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 117,
+        "chinese": "你看到多少只狮子了？我看到13只狮子。",
+        "english": "How many lions do you see? I see thirteen lions.",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "How疑问句"
+    },
+    {
+        "id": 118,
+        "chinese": "东尼，你看到什么了？我看见14只小鸟。它们在书上唱歌。",
+        "english": "What do you see, Tony? I see fourteen birds. They sing in the trees.",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 119,
+        "chinese": "在动物园里我看到很多动物。",
+        "english": "Iee many animals at the zoo.",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 120,
+        "chinese": "我看到3只老虎。它们长得很强壮。跑的飞快。",
+        "english": "I see three tigers. They are strong. They run fast.",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 121,
+        "chinese": "我看到十二只猴子。它们在树上跳来跳去，欢乐地玩着。",
+        "english": "I see twelve monkeys. They jump and play in the trees.",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 122,
+        "chinese": "我看到十三只大象。它们块头很大，慢悠悠地走着。",
+        "english": "I see thirteen elephants. They are very big. They walk slowly.",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 123,
+        "chinese": "我看到十四只小鸟。它们很可爱。它们在树上开演唱会。",
+        "english": "I see fourteen birds. They are cute. They sing in the trees.",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 124,
+        "chinese": "我度过了一个欢乐的时光。",
+        "english": "I have a good time.",
+        "dalei": "3U4-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 125,
+        "chinese": "老虎是黑黄相间的。它们又大又强壮。它们跑得飞快。",
+        "english": "Tigers are orange and black. They are big and strong. They run fast.",
+        "dalei": "3U4-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 126,
+        "chinese": "老虎有一张血盆大口，两只吊睛，四条强有力的腿和一条长长的尾巴。",
+        "english": "A tiger has a big mouth, two big eyes,four strong legs and a long tail.",
+        "dalei": "3U4-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 127,
+        "chinese": "我看到一只老虎。它有四条强有力的腿。",
+        "english": "I see a tiger. It has four strong legs.",
+        "dalei": "3U4-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 128,
+        "chinese": "我看到一只狮子。它有一条长长的尾巴。",
+        "english": "I see a lion. It has a long tail.",
+        "dalei": "3U4-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 129,
+        "chinese": "我看到...15只，16只，17只，18只大象。它们有着长长的鼻子。",
+        "english": "I see ... fifteen, sixteen, seventeen,eighteen elephants. They have long noses.",
+        "dalei": "3U4-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 130,
+        "chinese": "我看到19只猴子。一个猴子有一条长尾巴和两个长臂。",
+        "english": "I see nineteen monkeys.A monkey has a long tail and two long arms.",
+        "dalei": "3U4-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 131,
+        "chinese": "这是我的私人动物园。里面有一只老虎，11只狮子和13只大象。",
+        "english": "This is my zoo. It has a tiger, eleven lions and thirteen elephants.",
+        "dalei": "3U4-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 132,
+        "chinese": "这是我的私人动物园。它有11只狮子，13只大象，17只猴子和20只小鸟。",
+        "english": "This is my zoo. It has eleven lions, thirteen elephants,seventeen monkeys and twenty birds.",
+        "dalei": "3U4-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 133,
+        "chinese": "灰色的大笨象。它们有着长长的象鼻和大耳朵。慢悠悠的走着。",
+        "english": "The elephants are grey. They are big. They have long noses and big ears. They walk slowly.",
+        "dalei": "3U4-2",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 134,
+        "chinese": "你知道吗？",
+        "english": "Do you know?",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 135,
+        "chinese": "老虎很强壮。它是肉食动物。它们住在森林里。",
+        "english": "Tigers are strong.They eat meat.They live in the forest.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 136,
+        "chinese": "熊猫很可爱。它们喜欢竹子。它们也住在森林里。",
+        "english": "Pandas are cute.They like bamboo.They live in the forest too.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 137,
+        "chinese": "大象很大。它们吃很多水果。它们住在森林里和草原上。",
+        "english": "Elephants are big.They eat a lot of fruit.They live in the forest and the grassland.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 138,
+        "chinese": "看！我看到一只熊猫。",
+        "english": "Look! I see a panda.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 139,
+        "chinese": "熊猫是猫吗？不，它不是。熊猫不是猫。",
+        "english": "Is a panda a cat?No, it isn’t. A panda is not a cat.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 140,
+        "chinese": "老虎是一只大猫。",
+        "english": "A tiger is a big cat.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 141,
+        "chinese": "熊猫是熊吗？是的。熊猫是熊。",
+        "english": "Is panda a bear? Yes, it is. A panda is a bear.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 142,
+        "chinese": "熊猫吃什么的？它们喜欢竹子。它们也吃水果和蔬菜。",
+        "english": "What do pandas eat? They like bamboo. They also eat fruit and vegetables.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 143,
+        "chinese": "熊猫住在哪里？它们生活在森林里。它们很可爱。",
+        "english": "Where do pandas live? They live in the forest.They are cute.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "Where疑问句"
+    },
+    {
+        "id": 144,
+        "chinese": "我是一只熊猫。我来自中国。",
+        "english": "I am a panda. I am from China.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 145,
+        "chinese": "熊猫是黑白相间的。我长得又大又可爱。",
+        "english": "A panda is black and white. I am big and cute.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 146,
+        "chinese": "熊猫虎背熊腰，腿很短。",
+        "english": "Panda has a big body and short legs.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 147,
+        "chinese": "熊猫吃竹子。它住在森林里。",
+        "english": "A panda eats bamboo. He lives in the forest.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 148,
+        "chinese": "小孩喜欢熊猫。熊猫也喜欢小孩。",
+        "english": "Children love pandas. They love children too.",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 149,
+        "chinese": "让我们成为朋友。",
+        "english": "Let’s be friends!",
+        "dalei": "3U4-3",
+        "state": "未学",
+        "xiaolei": "祈使句"
+    },
+    {
+        "id": 150,
+        "chinese": "看那些小鸟。它们有各种各样的颜色。我喜欢那些小鸟。",
+        "english": "Look at those birds.They have many colours.I like those birds.",
+        "dalei": "3U5-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 151,
+        "chinese": "看这些小狗。它们很可爱。我喜欢这些小狗。",
+        "english": "Look at these dogs.They are cute.I like these dogs.",
+        "dalei": "3U5-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 152,
+        "chinese": "看这只猫。它很胖。我喜欢这只猫。",
+        "english": "Look at this cat.It is fat. I like this cat.",
+        "dalei": "3U5-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 153,
+        "chinese": "看那只兔子。它又小又白。我喜欢那兔子。",
+        "english": "Look at that rabbit.It is white and small.I like that rabbit.",
+        "dalei": "3U5-1",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 154,
+        "chinese": "你在宠物店里看到什么？",
+        "english": "What do you see at the pet shop?",
+        "dalei": "3U5-1",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 155,
+        "chinese": "这是什么？是一只小白兔吗？是的，它是。它是一只小白兔。",
+        "english": "What is this? Is it a rabbit?Yes, it is. It’s a white rabbit.",
+        "dalei": "3U5-1",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 156,
+        "chinese": "那是什么？那是一只老鼠？不，它不是。它是一只仓鼠。它很可爱。",
+        "english": "What’s that? Is that a mouse?No, it isn’t. It’s a hamster. It’s cute.",
+        "dalei": "3U5-1",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 157,
+        "chinese": "这些是什么？它们是猫屋？不，它们不是。它们是猫的玩具。",
+        "english": "What are these? Are they cat houses?No, they aren’t. They are toys for the cat.",
+        "dalei": "3U5-1",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 158,
+        "chinese": "那些是什么？它们也是猫的玩具？不，它们全都是猫粮。",
+        "english": "What are those? Are they toys for the cats too?No, they are all cat food.",
+        "dalei": "3U5-1",
+        "state": "未学",
+        "xiaolei": "What疑问句"
     }
 ]
