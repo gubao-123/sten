@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>英语句子疯狂练习</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -41,10 +42,6 @@
                 <button id="startLearningBtn">开始学习</button>
                 <button id="resetGroupBtn">重置本组进度</button>
             </div>
-            <div class="learning-history">
-                <h3>学习记录</h3>
-                <div id="historyList"></div>
-            </div>
         </div>
 
         <div class="exercise-area" id="exerciseArea" style="display: none;">
@@ -55,21 +52,28 @@
                 </div>
                 <div class="sentence-row">
                     <div class="label">你的翻译:</div>
-                    <input type="text" class="content input-field" id="userTranslation" placeholder="请输入英文翻译">
+                    <div class="handwriting-container">
+                        <canvas id="handwritingCanvas"></canvas>
+                        <div class="handwriting-tools">
+                            <button id="clearHandwriting">橡皮擦</button>
+                            <button id="submitTranslation">翻译提交</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="sentence-row" id="answerRow" style="display: none;">
                     <div class="label">参考答案:</div>
                     <div class="content" id="englishAnswer"></div>
-                </div>
-                <div class="sentence-row" id="repeatRow" style="display: none;">
-                    <div class="label">重复练习:</div>
-                    <input type="text" class="content input-field" id="repeatTranslation" placeholder="请再次输入英文翻译">
                 </div>
             </div>
         </div>
 
         <div class="navigation" id="navigation" style="display: none;">
             <button id="nextBtn">下一个</button>
+        </div>
+
+        <div class="learning-history" id="learningHistory" style="display: none;">
+            <h3>学习记录</h3>
+            <div id="historyList"></div>
         </div>
     </div>
 

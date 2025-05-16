@@ -1,6 +1,6 @@
 // 预定义的用户账号和密码
 const users = [
-    { username: 'yuanmeng', password: 'yuanmeng' },
+    { username: 'user1', password: 'pass1' },
     { username: 'user2', password: 'pass2' },
     { username: 'user3', password: 'pass3' },
     { username: 'user4', password: 'pass4' },
@@ -17,30 +17,32 @@ let sentences = [];
 let currentSentence = null;
 let currentGroup = '';
 let learningHistory = [];
+let signaturePad = null;
 
 // DOM元素
 const loginSection = document.getElementById('loginSection');
 const controlPanel = document.getElementById('controlPanel');
 const exerciseArea = document.getElementById('exerciseArea');
 const navigation = document.getElementById('navigation');
+const learningHistorySection = document.getElementById('learningHistory');
 const loginBtn = document.getElementById('loginBtn');
 const startLearningBtn = document.getElementById('startLearningBtn');
 const nextBtn = document.getElementById('nextBtn');
 const resetGroupBtn = document.getElementById('resetGroupBtn');
 const sentenceTypeSelect = document.getElementById('sentenceType');
 const chineseSentence = document.getElementById('chineseSentence');
-const userTranslation = document.getElementById('userTranslation');
 const englishAnswer = document.getElementById('englishAnswer');
 const answerRow = document.getElementById('answerRow');
-const repeatRow = document.getElementById('repeatRow');
-const repeatTranslation = document.getElementById('repeatTranslation');
-let learnedCountSpan = document.getElementById('learnedCount');
-let unlearnedCountSpan = document.getElementById('unlearnedCount');
-let totalCountSpan = document.getElementById('totalCount');
 const historyList = document.getElementById('historyList');
+const handwritingCanvas = document.getElementById('handwritingCanvas');
+const clearHandwritingBtn = document.getElementById('clearHandwriting');
+const submitTranslationBtn = document.getElementById('submitTranslation');
 
 // 初始化应用
 function initApp() {
+    // 初始化手写板
+    initHandwritingPad();
+    
     // 加载学习记录
     loadLearningHistory();
     // 初始化统计显示
@@ -74,14 +76,45 @@ function initApp() {
     startLearningBtn.addEventListener('click', startLearning);
     nextBtn.addEventListener('click', handleNextButton);
     resetGroupBtn.addEventListener('click', handleResetGroup);
-    
-    userTranslation.addEventListener('keypress', e => {
-        if (e.key === 'Enter') showAnswer();
-    });
+    clearHandwritingBtn.addEventListener('click', clearHandwriting);
+    submitTranslationBtn.addEventListener('click', handleSubmitTranslation);
+}
 
-    repeatTranslation.addEventListener('keypress', e => {
-        if (e.key === 'Enter') handleNextButton();
+// 初始化手写板
+function initHandwritingPad() {
+    signaturePad = new SignaturePad(handwritingCanvas, {
+        minWidth: 1,
+        maxWidth: 3,
+        penColor: "rgb(0, 0, 0)",
+        backgroundColor: "rgb(255, 255, 255)"
     });
+    
+    // 调整画布大小
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        handwritingCanvas.width = handwritingCanvas.offsetWidth * ratio;
+        handwritingCanvas.height = handwritingCanvas.offsetHeight * ratio;
+        handwritingCanvas.getContext("2d").scale(ratio, ratio);
+        signaturePad.clear(); // 清除画布
+    }
+    
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+}
+
+// 清除手写内容
+function clearHandwriting() {
+    signaturePad.clear();
+}
+
+// 处理翻译提交
+function handleSubmitTranslation() {
+    if (signaturePad.isEmpty()) {
+        alert('请先手写输入您的翻译');
+        return;
+    }
+    
+    showAnswer();
 }
 
 // 保存数据到本地存储
@@ -199,6 +232,7 @@ function startLearning() {
     showNextSentence();
     exerciseArea.style.display = 'block';
     navigation.style.display = 'block';
+    learningHistorySection.style.display = 'block';
 }
 
 // 处理重置组别
@@ -230,10 +264,8 @@ function resetGroupProgress(group) {
 // 显示下一个句子
 function showNextSentence() {
     answerRow.style.display = 'none';
-    repeatRow.style.display = 'none';
-    userTranslation.value = '';
-    repeatTranslation.value = '';
-
+    clearHandwriting();
+    
     const unlearnedSentences = getUnlearnedSentences();
 
     if (unlearnedSentences.length === 0) {
@@ -247,7 +279,6 @@ function showNextSentence() {
     const randomIndex = Math.floor(Math.random() * unlearnedSentences.length);
     currentSentence = unlearnedSentences[randomIndex];
     chineseSentence.textContent = currentSentence.chinese;
-    userTranslation.focus();
 }
 
 // 获取未学习句子
@@ -259,15 +290,8 @@ function getUnlearnedSentences() {
 
 // 显示答案
 function showAnswer() {
-    if (!userTranslation.value.trim()) {
-        alert('请先输入您的翻译');
-        return;
-    }
-
     englishAnswer.textContent = currentSentence.english;
     answerRow.style.display = 'flex';
-    repeatRow.style.display = 'flex';
-    repeatTranslation.focus();
 }
 
 // 更新学习统计
