@@ -1,6 +1,6 @@
 // 预定义的用户账号和密码
 const users = [
-    { username: 'ym', password: 'ym' },
+    { username: 'user1', password: 'pass1' },
     { username: 'user2', password: 'pass2' },
     { username: 'user3', password: 'pass3' },
     { username: 'user4', password: 'pass4' },
@@ -39,8 +39,30 @@ const handwritingCanvas = document.getElementById('handwritingCanvas');
 const clearHandwritingBtn = document.getElementById('clearHandwriting');
 const submitTranslationBtn = document.getElementById('submitTranslation');
 
+// 检测设备类型
+function detectDeviceType() {
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isWindows = navigator.platform.indexOf('Win') > -1;
+    const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    return { isTouchDevice, isWindows, isChrome };
+}
+
 // 初始化应用
 function initApp() {
+    const { isTouchDevice, isWindows, isChrome } = detectDeviceType();
+    
+    // 为Windows触摸设备添加特殊处理
+    if (isWindows && isTouchDevice) {
+        document.body.classList.add('windows-touch-device');
+        console.log('运行在Windows触摸设备上');
+        
+        // 针对Chrome浏览器的特殊处理
+        if (isChrome) {
+            document.body.classList.add('windows-chrome-touch');
+            console.log('运行在Chrome浏览器上');
+        }
+    }
+
     loadLearningHistory();
     updateStatsDisplay();
     
@@ -52,13 +74,31 @@ function initApp() {
         alert('初始化失败: ' + error.message);
     });
 
-    // 事件监听
-    loginBtn.addEventListener('click', handleLogin);
-    startLearningBtn.addEventListener('click', startLearning);
-    nextBtn.addEventListener('click', handleNextButton);
-    resetGroupBtn.addEventListener('click', handleResetGroup);
-    clearHandwritingBtn.addEventListener('click', clearHandwriting);
-    submitTranslationBtn.addEventListener('click', handleSubmitTranslation);
+    // 增强的事件监听 - 针对智能白板优化
+    setupEventListeners();
+}
+
+// 设置事件监听器
+function setupEventListeners() {
+    // 使用pointer事件代替click提高触摸设备兼容性
+    const events = ['pointerdown', 'click']; // 同时监听两种事件
+    
+    events.forEach(eventType => {
+        loginBtn.addEventListener(eventType, handleLogin, { passive: false });
+        startLearningBtn.addEventListener(eventType, startLearning, { passive: false });
+        nextBtn.addEventListener(eventType, handleNextButton, { passive: false });
+        resetGroupBtn.addEventListener(eventType, handleResetGroup, { passive: false });
+        clearHandwritingBtn.addEventListener(eventType, clearHandwriting, { passive: false });
+        submitTranslationBtn.addEventListener(eventType, handleSubmitTranslation, { passive: false });
+    });
+
+    // 输入框回车键支持
+    document.getElementById('username').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleLogin(e);
+    });
+    document.getElementById('password').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleLogin(e);
+    });
 }
 
 // 加载句子数据
@@ -69,10 +109,8 @@ function loadSentencesData() {
             return response.json();
         })
         .then(data => {
-            // 尝试从本地存储加载学习进度
             const savedProgress = localStorage.getItem('sentenceProgress');
             if (savedProgress) {
-                // 合并原始数据和保存的进度
                 const savedData = JSON.parse(savedProgress);
                 sentences = data.map(item => {
                     const savedItem = savedData.find(s => s.id === item.id);
@@ -93,7 +131,6 @@ function initHandwritingPad() {
     const canvas = document.getElementById('handwritingCanvas');
     const container = canvas.parentElement;
     
-    // 确保canvas已经显示在页面上
     setTimeout(() => {
         const resizeCanvas = () => {
             const ratio = Math.max(window.devicePixelRatio || 1, 1);
@@ -115,41 +152,40 @@ function initHandwritingPad() {
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
 
-        // 修复移动端触摸问题
+        // 增强的触摸支持
         if ('ontouchstart' in window) {
-            // 禁用页面滚动
+            // 防止页面滚动
             document.body.style.overflow = 'hidden';
             document.body.style.touchAction = 'none';
             
-            canvas.addEventListener('touchstart', (e) => {
+            // 更可靠的触摸事件处理
+            const handleTouch = (e) => {
                 e.preventDefault();
-                const touch = e.touches[0];
-                const mouseEvent = new MouseEvent('mousedown', {
-                    clientX: touch.clientX,
-                    clientY: touch.clientY
-                });
-                canvas.dispatchEvent(mouseEvent);
-            }, { passive: false });
+                const touch = e.touches[0] || e.changedTouches[0];
+                const mouseEventType = {
+                    touchstart: 'mousedown',
+                    touchmove: 'mousemove',
+                    touchend: 'mouseup'
+                }[e.type];
+                
+                if (mouseEventType) {
+                    const mouseEvent = new MouseEvent(mouseEventType, {
+                        clientX: touch.clientX,
+                        clientY: touch.clientY,
+                        bubbles: true,
+                        cancelable: true
+                    });
+                    canvas.dispatchEvent(mouseEvent);
+                }
+            };
 
-            canvas.addEventListener('touchmove', (e) => {
-                e.preventDefault();
-                const touch = e.touches[0];
-                const mouseEvent = new MouseEvent('mousemove', {
-                    clientX: touch.clientX,
-                    clientY: touch.clientY
-                });
-                canvas.dispatchEvent(mouseEvent);
-            }, { passive: false });
-
-            canvas.addEventListener('touchend', (e) => {
-                e.preventDefault();
-                const mouseEvent = new MouseEvent('mouseup');
-                canvas.dispatchEvent(mouseEvent);
-            }, { passive: false });
+            canvas.addEventListener('touchstart', handleTouch, { passive: false });
+            canvas.addEventListener('touchmove', handleTouch, { passive: false });
+            canvas.addEventListener('touchend', handleTouch, { passive: false });
         }
         
         isInitialized = true;
-    }, 100); // 添加短暂延迟确保DOM完全渲染
+    }, 100);
 }
 
 // 清除手写内容
@@ -160,7 +196,8 @@ function clearHandwriting() {
 }
 
 // 处理翻译提交
-function handleSubmitTranslation() {
+function handleSubmitTranslation(e) {
+    if (e) e.preventDefault();
     if (!signaturePad || signaturePad.isEmpty()) {
         alert('请先手写输入您的翻译');
         return;
@@ -234,7 +271,12 @@ function updateStatsDisplay() {
 }
 
 // 处理登录
-function handleLogin() {
+function handleLogin(e) {
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    
     const username = document.getElementById('username').value.trim();
     const password = document.getElementById('password').value.trim();
 
@@ -249,6 +291,11 @@ function handleLogin() {
         loginSection.style.display = 'none';
         controlPanel.style.display = 'block';
         updateStatsDisplay();
+        
+        // 添加触觉反馈（如果设备支持）
+        if (window.navigator.vibrate) {
+            window.navigator.vibrate(50);
+        }
     } else {
         alert('用户名或密码错误，请重试！');
         document.getElementById('password').value = '';
@@ -256,7 +303,12 @@ function handleLogin() {
 }
 
 // 开始学习
-function startLearning() {
+function startLearning(e) {
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    
     currentGroup = sentenceTypeSelect.value;
     
     if (!currentGroup) {
@@ -272,12 +324,10 @@ function startLearning() {
         return;
     }
 
-    // 先显示练习区域，再初始化手写板
     exerciseArea.style.display = 'block';
     navigation.style.display = 'block';
     learningHistorySection.style.display = 'block';
     
-    // 初始化手写板
     initHandwritingPad();
     
     addHistoryRecord('开始学习');
@@ -286,7 +336,12 @@ function startLearning() {
 }
 
 // 处理重置组别
-function handleResetGroup() {
+function handleResetGroup(e) {
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    
     if (!currentGroup) {
         alert('请先选择一个句型');
         return;
@@ -370,7 +425,12 @@ function markAsLearned() {
 }
 
 // 处理下一个按钮
-function handleNextButton() {
+function handleNextButton(e) {
+    if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    
     markAsLearned();
     showNextSentence();
     updateStats();
