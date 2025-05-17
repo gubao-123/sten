@@ -93,36 +93,63 @@ function initHandwritingPad() {
     const canvas = document.getElementById('handwritingCanvas');
     const container = canvas.parentElement;
     
-    const resizeCanvas = () => {
-        const ratio = Math.max(window.devicePixelRatio || 1, 1);
-        canvas.width = container.offsetWidth * ratio;
-        canvas.height = container.offsetHeight * ratio;
-        canvas.getContext('2d').scale(ratio, ratio);
-        canvas.style.width = '100%';
-        canvas.style.height = '100%';
-    };
-    
-    signaturePad = new SignaturePad(canvas, {
-        minWidth: 1,
-        maxWidth: 3,
-        penColor: "rgb(0, 0, 0)",
-        backgroundColor: "rgb(255, 255, 255)",
-        throttle: 16
-    });
+    // 确保canvas已经显示在页面上
+    setTimeout(() => {
+        const resizeCanvas = () => {
+            const ratio = Math.max(window.devicePixelRatio || 1, 1);
+            canvas.width = container.offsetWidth * ratio;
+            canvas.height = container.offsetHeight * ratio;
+            canvas.getContext('2d').scale(ratio, ratio);
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+        };
+        
+        signaturePad = new SignaturePad(canvas, {
+            minWidth: 1,
+            maxWidth: 3,
+            penColor: "rgb(0, 0, 0)",
+            backgroundColor: "rgb(255, 255, 255)",
+            throttle: 16
+        });
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
 
-    if ('ontouchstart' in window) {
-        canvas.addEventListener('touchmove', (e) => {
-            if (e.target === canvas) {
+        // 修复移动端触摸问题
+        if ('ontouchstart' in window) {
+            // 禁用页面滚动
+            document.body.style.overflow = 'hidden';
+            document.body.style.touchAction = 'none';
+            
+            canvas.addEventListener('touchstart', (e) => {
                 e.preventDefault();
-            }
-        }, { passive: false });
-        document.body.style.cursor = 'pointer';
-    }
-    
-    isInitialized = true;
+                const touch = e.touches[0];
+                const mouseEvent = new MouseEvent('mousedown', {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(mouseEvent);
+            }, { passive: false });
+
+            canvas.addEventListener('touchmove', (e) => {
+                e.preventDefault();
+                const touch = e.touches[0];
+                const mouseEvent = new MouseEvent('mousemove', {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(mouseEvent);
+            }, { passive: false });
+
+            canvas.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                const mouseEvent = new MouseEvent('mouseup');
+                canvas.dispatchEvent(mouseEvent);
+            }, { passive: false });
+        }
+        
+        isInitialized = true;
+    }, 100); // 添加短暂延迟确保DOM完全渲染
 }
 
 // 清除手写内容
@@ -245,13 +272,17 @@ function startLearning() {
         return;
     }
 
-    initHandwritingPad();
-    addHistoryRecord('开始学习');
-    updateStats();
-    showNextSentence();
+    // 先显示练习区域，再初始化手写板
     exerciseArea.style.display = 'block';
     navigation.style.display = 'block';
     learningHistorySection.style.display = 'block';
+    
+    // 初始化手写板
+    initHandwritingPad();
+    
+    addHistoryRecord('开始学习');
+    updateStats();
+    showNextSentence();
 }
 
 // 处理重置组别
