@@ -18,6 +18,7 @@ let currentSentence = null;
 let currentGroup = '';
 let learningHistory = [];
 let signaturePad = null;
+let isInitialized = false;
 
 // DOM元素
 const loginSection = document.getElementById('loginSection');
@@ -40,33 +41,16 @@ const submitTranslationBtn = document.getElementById('submitTranslation');
 
 // 初始化应用
 function initApp() {
-    // 加载学习记录
     loadLearningHistory();
-    // 初始化统计显示
     updateStatsDisplay();
     
     // 加载句子数据
-    fetch('words.json')
-        .then(response => {
-            if (!response.ok) throw new Error('网络响应不正常');
-            return response.json();
-        })
-        .then(data => {
-            // 尝试从本地存储加载学习进度
-            const savedProgress = localStorage.getItem('sentenceProgress');
-            sentences = savedProgress ? JSON.parse(savedProgress) : data;
-            
-            // 如果没有保存的进度，使用原始数据
-            if (!savedProgress) {
-                saveToLocalStorage();
-            }
-            
-            initSentenceTypeSelect();
-        })
-        .catch(error => {
-            console.error('加载句子数据失败:', error);
-            alert('加载句子数据失败: ' + error.message);
-        });
+    loadSentencesData().then(() => {
+        initSentenceTypeSelect();
+    }).catch(error => {
+        console.error('初始化失败:', error);
+        alert('初始化失败: ' + error.message);
+    });
 
     // 事件监听
     loginBtn.addEventListener('click', handleLogin);
@@ -77,12 +61,38 @@ function initApp() {
     submitTranslationBtn.addEventListener('click', handleSubmitTranslation);
 }
 
-// 初始化手写板（修复版）
+// 加载句子数据
+function loadSentencesData() {
+    return fetch('words.json')
+        .then(response => {
+            if (!response.ok) throw new Error('网络响应不正常');
+            return response.json();
+        })
+        .then(data => {
+            // 尝试从本地存储加载学习进度
+            const savedProgress = localStorage.getItem('sentenceProgress');
+            if (savedProgress) {
+                // 合并原始数据和保存的进度
+                const savedData = JSON.parse(savedProgress);
+                sentences = data.map(item => {
+                    const savedItem = savedData.find(s => s.id === item.id);
+                    return savedItem ? {...item, state: savedItem.state} : item;
+                });
+            } else {
+                sentences = data;
+            }
+            saveToLocalStorage();
+            return sentences;
+        });
+}
+
+// 初始化手写板
 function initHandwritingPad() {
+    if (isInitialized) return;
+    
     const canvas = document.getElementById('handwritingCanvas');
     const container = canvas.parentElement;
     
-    // 设置canvas的物理尺寸
     const resizeCanvas = () => {
         const ratio = Math.max(window.devicePixelRatio || 1, 1);
         canvas.width = container.offsetWidth * ratio;
@@ -92,7 +102,6 @@ function initHandwritingPad() {
         canvas.style.height = '100%';
     };
     
-    // 初始化签名板
     signaturePad = new SignaturePad(canvas, {
         minWidth: 1,
         maxWidth: 3,
@@ -101,24 +110,19 @@ function initHandwritingPad() {
         throttle: 16
     });
 
-    // 首次调整大小
     resizeCanvas();
-    
-    // 处理窗口大小变化
     window.addEventListener('resize', resizeCanvas);
 
-    // 触摸设备支持
     if ('ontouchstart' in window) {
-        // 禁用触摸设备的页面滚动
         canvas.addEventListener('touchmove', (e) => {
             if (e.target === canvas) {
                 e.preventDefault();
             }
         }, { passive: false });
-        
-        // 修复iOS Safari的触摸问题
         document.body.style.cursor = 'pointer';
     }
+    
+    isInitialized = true;
 }
 
 // 清除手写内容
@@ -134,7 +138,6 @@ function handleSubmitTranslation() {
         alert('请先手写输入您的翻译');
         return;
     }
-    
     showAnswer();
 }
 
@@ -154,7 +157,6 @@ function loadLearningHistory() {
 // 更新学习记录显示
 function updateHistoryDisplay() {
     historyList.innerHTML = '';
-    // 只显示最近的10条记录
     const recentHistory = learningHistory.slice(-10).reverse();
     
     recentHistory.forEach(record => {
@@ -201,10 +203,6 @@ function updateStatsDisplay() {
     const statsContainer = document.querySelector('.stats');
     if (statsContainer) {
         statsContainer.innerHTML = '学习统计: 已学<span id="learnedCount">0</span>/未学<span id="unlearnedCount">0</span>/总数<span id="totalCount">0</span>';
-        
-        learnedCountSpan = document.getElementById('learnedCount');
-        unlearnedCountSpan = document.getElementById('unlearnedCount');
-        totalCountSpan = document.getElementById('totalCount');
     }
 }
 
@@ -239,7 +237,6 @@ function startLearning() {
         return;
     }
 
-    // 检查该组是否已学完
     const groupSentences = sentences.filter(s => s.dalei === currentGroup);
     const unlearnedSentences = groupSentences.filter(s => s.state !== '已学');
     
@@ -248,9 +245,7 @@ function startLearning() {
         return;
     }
 
-    // 初始化手写板（确保在显示后初始化）
     initHandwritingPad();
-    
     addHistoryRecord('开始学习');
     updateStats();
     showNextSentence();
@@ -326,9 +321,9 @@ function updateStats() {
     const learnedSentences = groupSentences.filter(s => s.state === '已学').length;
     const unlearnedSentences = groupSentences.length - learnedSentences;
     
-    totalCountSpan.textContent = groupSentences.length;
-    learnedCountSpan.textContent = learnedSentences;
-    unlearnedCountSpan.textContent = unlearnedSentences;
+    document.getElementById('totalCount').textContent = groupSentences.length;
+    document.getElementById('learnedCount').textContent = learnedSentences;
+    document.getElementById('unlearnedCount').textContent = unlearnedSentences;
 }
 
 // 标记当前句子为已学
