@@ -1438,5 +1438,77 @@
         "dalei": "三年级第五单元第三课",
         "state": "未学",
         "xiaolei": "陈述句"
+    },
+    {
+        "id": 181,
+        "chinese": "你有宠物吗？我养了一条鱼，叫小军。",
+        "english": "Do you have a pet? Yes, I have a fish. Her name is Xiaoju.",
+        "dalei": "三年级第五单元第三课",
+        "state": "未学",
+        "xiaolei": "一般疑问句"
+    },
+    {
+        "id": 182,
+        "chinese": "你为你的鱼做了些什么？我在晚上喂小军吃饭。",
+        "english": "What do you do for your fish? I feed Xiaoju in the evening.(what do you do for)",
+        "dalei": "三年级第五单元第三课",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 183,
+        "chinese": "你为你的狗狗做了些什么？放学后我和lUCK散步。你呢，东尼？",
+        "english": "What do you do for your dog? I walk my dog Lucky after school. What about you, Tony?(what about you)",
+        "dalei": "三年级第五单元第三课",
+        "state": "未学",
+        "xiaolei": "What疑问句"
+    },
+    {
+        "id": 184,
+        "chinese": "我的小鸟Dudu，每天早上叫醒我。然后我们一起唱歌！",
+        "english": "Dudu, my bird, wakes me up every morning. Then we sing together!(wake sb. up)",
+        "dalei": "三年级第五单元第三课",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 185,
+        "chinese": "在早上喂狗。放学后遛狗。",
+        "english": "Feed the dog in the morning.Walk the dog after school.(walk the dog)",
+        "dalei": "三年级第五单元第三课",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 186,
+        "chinese": "饭后和狗狗玩耍。",
+        "english": "Play with the dog after dinner.(play with the dong)",
+        "dalei": "三年级第五单元第三课",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 187,
+        "chinese": "带狗去看病。",
+        "english": "Take the dog to see a doctor.(see a doctor)",
+        "dalei": "三年级第五单元第三课",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 188,
+        "chinese": "清洁狗屋。",
+        "english": "Clean the dog house.",
+        "dalei": "三年级第五单元第三课",
+        "state": "未学",
+        "xiaolei": "陈述句"
+    },
+    {
+        "id": 189,
+        "chinese": "照顾好你的宠物。",
+        "english": "Take care of your pet.(take care of)",
+        "dalei": "三年级第五单元第三课",
+        "state": "未学",
+        "xiaolei": "陈述句"
     }
 ]
